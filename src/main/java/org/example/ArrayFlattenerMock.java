@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayFlattenerMock implements ArrayFlattener {
+    private boolean wasInvoked = false;
 
     public int[] flattenArray(int[][] inputArray) {
+        wasInvoked = true;
 
         if (inputArray == null) {
             return new int[0];
@@ -28,6 +30,10 @@ public class ArrayFlattenerMock implements ArrayFlattener {
                 result.add(num);
             }
         }
+    }
+
+    public boolean wasInvoked() {
+        return wasInvoked;
     }
 
     public static void main(String[] args) {

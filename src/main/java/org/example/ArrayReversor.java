@@ -10,10 +10,6 @@ public class ArrayReversor {
 
     public int[] reverseArray(int[][] inputArray) {
 
-        if (inputArray == null) {
-            return new int[0];
-        }
-
         int[] flattenedArray = arrayFlattener.flattenArray(inputArray);
 
         int length = flattenedArray.length;
